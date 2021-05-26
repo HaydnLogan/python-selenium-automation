@@ -19,7 +19,7 @@ def type_enter(context):
 @then('Verify Cancel')
 def verify_cancel(context):
 #    actual_result = context.driver.find_element(By.XPATH,"//div[@class='help-content']").text
-    actual_result = context.driver.find_element(By.XPATH, "//div/p/b[@id='search-help']").text
+    actual_result = context.driver.find_element(By.XPATH, "//div/p/b[@id='search-help']").text # I am having trouble with this line
     expected_result = '"Cancel Items or Orders"'
     assert expected_result == actual_result, f"Expected {expected_result}, but got {actual_result}"
-driver.find_element(By.CSS_SELECTOR)
+
