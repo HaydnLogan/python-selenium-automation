@@ -1,0 +1,12 @@
+
+Use xPath when no ID is available
+Used in java script console to build xpath
+
+clear()     Clears the screen
+
+XPath="//tagname[@attribute='value']"
+$x("//span[@class='icp-nav-flag icp-nav-flag-us']")
+$x("//div[@id='nav-tools']")
+$x("//div[@id='nav-tools']//span[@class='icp-nav-flag icp-nav-flag-us']")   looking inside, using parent node
+$x("//div[@id='nav-tools']//span[contains(@class, 'icp-nav-flag icp-nav-flag-us')]")  | = replaced with ,
+$x("//a[text()='Best Sellers']")  Not recommended due to language or text changes
