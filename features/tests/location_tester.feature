@@ -1,5 +1,5 @@
 # Created by Haydn at 5/26/2021
-Feature: Check locations
+Feature: Check locations (HW2)
   Verify locations are entered correctly
 
   Scenario: Homework location checker
