@@ -1,5 +1,5 @@
 # Created by Haydn at 6/3/2021
-Feature: Amazon Cart Searches (HW3)
+Feature: Amazon Cart Searches (HW3, Tasks 3 and 4)
   Verify number of Amazon Cart items
 
   Scenario: Check Amazon Cart is empty (Task 3)
