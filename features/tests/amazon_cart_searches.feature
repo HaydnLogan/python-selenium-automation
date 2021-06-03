@@ -1,6 +1,6 @@
 # Created by Haydn at 6/3/2021
-Feature: Amazon Cart (HW3)
-  Verify Amazon Cart is empty
+Feature: Amazon Cart Searches (HW3)
+  Verify number of Amazon Cart items
 
   Scenario: Check Amazon Cart is empty (Task 3)
     Given Open Amazon page
