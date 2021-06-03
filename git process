@@ -11,3 +11,6 @@ mkdir  # make a new directory
 git pull
 git status
 git add .   ( to add all files)
+git commit -m "message"
+git status
+git push
