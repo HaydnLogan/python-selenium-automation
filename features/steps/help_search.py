@@ -1,4 +1,5 @@
 # HW2 May 23, 2021
+# HW3
 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -20,7 +21,7 @@ def type_enter(context):
 
 @then('Verify Cancel')
 def verify_cancel(context):
-    actual_result = context.driver.find_element(By.XPATH, '/html/body/div[2]/div[2]/div[1]/div/div[2]/div/div/h1').text # this was a tricky one for me
+    actual_result = context.driver.find_element(By.XPATH, "//div[@class='help-content']/h1").text
     expected_result = 'Cancel Items or Orders'
     assert expected_result == actual_result, f"Expected {expected_result}, but got {actual_result}"
 

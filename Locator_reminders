@@ -10,3 +10,6 @@ $x("//div[@id='nav-tools']")
 $x("//div[@id='nav-tools']//span[@class='icp-nav-flag icp-nav-flag-us']")   looking inside, using parent node
 $x("//div[@id='nav-tools']//span[contains(@class, 'icp-nav-flag icp-nav-flag-us')]")  | = replaced with ,
 $x("//a[text()='Best Sellers']")  Not recommended due to language or text changes
+
+examples in console:
+$x("//input[@id='continue']") {the continue button for Amazon Sign-in}

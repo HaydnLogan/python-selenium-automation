@@ -1,0 +1,13 @@
+Terminal commands:
+
+ls -a    # to see all files, including hidden files
+cat (and name of file, [tab to complete name]) to see text inside that file
+
+pwd  # to see directory being worked.
+
+mkdir  # make a new directory
+
+**  PROCESS **
+git pull
+git status
+git add .   ( to add all files)
