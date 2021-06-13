@@ -3,13 +3,15 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 
-#@given('Open Amazon page')
-#def open_amazon(context):
+# @given('Open Amazon page')
+# def open_amazon(context):
 #    context.driver.get('https://amazon.com/')
+
 
 @when('Click Orders')
 def search_amazon(context):
     context.driver.find_element(By.XPATH, "//a[contains(@href, 'orders')]").click()
+
 
 @then('Verify signin shown')
 def verify_search_worked(context):

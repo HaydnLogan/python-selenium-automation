@@ -14,3 +14,5 @@ git add .   ( to add all files)
 git commit -m "message"
 git status
 git push
+
+how to hide?

@@ -1,13 +1,16 @@
 # HW2 May 23, 2021
 # HW3 add on
 
+
 from selenium.webdriver.common.by import By
-from behave import given, when, then
+from behave import when, then
 import time
 
-#@given('Open Amazon page')
-#def open_amazon(context):
+
+# @given('Open Amazon page')
+# def open_amazon(context):
 #    context.driver.get('https://amazon.com/')
+
 
 @when('Navigate to sign in page')
 def sign_in(context):
@@ -20,9 +23,11 @@ def sign_in(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.ID, 'nav-link-accountList').click()
 #    context.driver.find_element(By.CSS_SELECTOR, '#nav-flyout-ya-newCust').click()
-#    context.driver.find_element(By.CSS_SELECTOR, "#nav-flyout-ya-newCust a[href*='register']").click() ## How can I click on the link inside a flyout nav area?
+#    context.driver.find_element(By.CSS_SELECTOR, "#nav-flyout-ya-newCust a[href*='register']").click()
+    #    ## How can I click on the link inside a flyout nav area?
     context.driver.find_element(By.ID, 'createAccountSubmit').click()
 #    time.sleep(2)
+
 
 @when('Click on Amazon logo')
 def click_logo(context):
@@ -43,9 +48,11 @@ def go_back(context):
     context.driver.implicitly_wait(5)
     context.driver.back()
 
+
 @when('Wait and See')
 def wait_and_see(context):
     time.sleep(3)
+
 
 @when('Enter Name')
 def enter_name(context):
@@ -58,13 +65,14 @@ def click_email(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.ID, 'ap_email').send_keys('test email@')
 #    context.driver.find_element(By.XPATH, "//input[@type='email']").send_keys('test name') # old way
-    #time.sleep(3)
+# time.sleep(3)
 
 
 @when('Enter Password')
 def enter_password(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.ID, 'ap_password').send_keys('Test Pass Word')
+
 
 @when('ReEnter Password')
 def re_enter_password(context):
@@ -79,17 +87,18 @@ def verify_password_text(context):
     assert expected_result == actual_result, f"Expected {expected_result}, but got {actual_result}"
 
 
-
 @when('Click on continue')
 def click_continue(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.XPATH, "//input[@id='continue']").click()
+
 
 @when('Click help')
 def click_help(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.XPATH, "//span[@class='a-expander-prompt']").click()
     time.sleep(1)
+
 
 @when('Click forget')
 def click_forget(context):
@@ -101,33 +110,38 @@ def click_other(context):
     context.driver.find_element(By.XPATH, "//span[@class='a-expander-prompt']").click()
     context.driver.find_element(By.ID, 'ap-other-signin-issues-link').click()
 
+
 @when('Click create')
 def click_create(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.XPATH, "//a[@id='createAccountSubmit']").click()
+
 
 @when('Click create on Registry')
 def click_create_from_registry(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.ID, 'continue').click()
 
+
 @when('Click conditions')
 def click_conditions(context):
     context.driver.implicitly_wait(5)
     context.driver.find_element(By.CSS_SELECTOR, 'a[href*="condition"]').click()
-#   context.driver.find_element(By.XPATH, "//div[@id='legalTextRow']//a[contains(@href, 'condition')]").click() # old way
+#   context.driver.find_element(By.XPATH, "//div[@id='legalTextRow']//a[contains(@href, 'condition')]").click()
+#                                              old way
+
 
 @when('Click privacy')
 def click_privacy(context):
     context.driver.find_element(By.CSS_SELECTOR, 'a[href*="privacy"]').click()
 #   context.driver.find_element(By.XPATH, "//a[contains(@href, 'privacy')]").click()  # Old way
 
+
 @when('Click Sign in')
 def click_sign_in(context):
     context.driver.find_element(By.CSS_SELECTOR, 'a[href*="signin"]').click()
 
+
 @then('close page')
 def close_page(context):
     context.driver.close()
-
-
