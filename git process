@@ -16,3 +16,28 @@ git status
 git push
 
 how to hide?
+
+put the path in quotes when using cd
+"C:\Users\Haydn\Documents\QA Work\QA Automation"
+
+Git Branches
+git branch -av  // list local and remote branches.
+                    * indicates current branch
+
+git branch newbranch // creates new branch 'newbranch'
+
+git checkout newbranch // switches to 'newbranch'
+
+git checkout -b newbranch2 // creates and moves into 'newbranch2'
+
+git branch -d newbranch // deletes 'newbranch'
+
+git merge newbranch2 // merges newbranch2 items to current branch
+
+Create file and put data inside, one command
+echo "this is text" > test3.txt
+
+cat test3.txt // to see contents
+
+
+
