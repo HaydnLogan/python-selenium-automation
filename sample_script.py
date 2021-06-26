@@ -28,7 +28,7 @@ search.send_keys('Dress')
 # Explicit Wait
 # Checks 500 ms for condition (0.5 sec)
 driver.wait = WebDriverWait(driver, 15)
-e = driver.wait.until(EC.elemenet_to_be_clickable((By.NAME, 'btnk')), message='Error, search button not clickable')
+e = driver.wait.until(EC.element_to_be_clickable((By.NAME, 'btnk')), message='Error, search button not clickable')
 # EC = Expected Condtions library
 
 # click search

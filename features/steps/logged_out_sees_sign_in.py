@@ -10,7 +10,14 @@ from behave import given, when, then
 
 @when('Click Orders')
 def search_amazon(context):
-    context.driver.find_element(By.XPATH, "//a[contains(@href, 'orders')]").click()
+#   context.driver.find_element(By.XPATH, "//a[contains(@href, 'orders')]").click()
+    orders_link = context.driver.find_element(By.ID, 'nav-orders')
+    print(orders_link)
+    context.driver.refresh()
+    # grab link again to avoid stale element errors
+    orders_link = context.driver.find_element(By.ID, 'nav-orders')
+    print(orders_link)
+    orders_link.click()
 
 
 @then('Verify signin shown')
