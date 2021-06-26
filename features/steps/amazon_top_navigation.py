@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from behave import when, then
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 
 @when('Search for {search_word}')
@@ -18,7 +19,7 @@ def verify_cart_count(context, expected_count):
 
 
 @when('Click Sign In from popup')
-def click_order(context):
+def click_sign_in_btn(context):
  #  context.driver.find_element(By.ID, 'nav-orders').click()
     e = context.driver.wait.until(EC.element_to_be_clickable((
         By.CSS_SELECTOR, '#nav-signin-tooltip .nav-action-inner')))
@@ -35,3 +36,23 @@ def verify_ham_menu_visible(context):
 #   print('USING find elementSSS')
 #   elements = context.driver.find_elements(By.ID, '22n2av-hamburger-menu')
 #   print(elements)
+
+
+@then('Verify Sign in popup is clickable')
+def verify_signin_popup_clickable(context):
+    context.driver.wait.until(EC.element_to_be_clickable((
+        By.CSS_SELECTOR, '#nav-signin-tooltip .nav-action-inner')))
+
+
+@when('Wait for {sec_count} sec')
+def sleep_sec(context, sec_count):
+    sleep(int(sec_count))
+
+
+@then('Verify Sign in popup disappears')
+def verify_signin_popup__disappears(context):
+#   context.driver.wait.until(EC.invisibility_of_element((
+#       By.CSS_SELECTOR, '#nav-signin-tooltip .nav-action-inner')))
+#   context.driver.wait.until_not(condition == False)
+    context.driver.wait.until_not(EC.visibility_of_element_located((
+        By.CSS_SELECTOR, '#nav-signin-tooltip .nav-action-inner')))
