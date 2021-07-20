@@ -6,7 +6,7 @@ Feature: Test Amazon search
     Given Open Amazon page
     When Input Table in search field
     And Click on Amazon search icon
-    Then Verify search worked
+    Then Verify search worked for "Table"
 
   Scenario: User can select pant colors  (lesson 8, HW5)
     Given Open Amazon product B07X8XJRS9 page
