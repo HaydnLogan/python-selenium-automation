@@ -5,7 +5,7 @@ Feature: Amazon Cart Searches (HW3, Tasks 3 and 4)
   Scenario: Check Amazon Cart is empty (HW3 Task 3)
     Given Open Amazon page
     When Click on Cart from Amazon home
-    And Wait and See
+#    And Wait and See
 #   Then Verify Amazon Cart is empty #HW3
     Then "Your Amazon Cart is empty" message is displayed
 

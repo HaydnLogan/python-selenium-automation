@@ -5,4 +5,4 @@ Feature: Logged out checker (HW2, May 23)
   Scenario: Logged out clicks Orders
     Given Open Amazon page
     When Click Orders
-    Then Verify signin shown
+    Then Verify Sign-In shown

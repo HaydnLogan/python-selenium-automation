@@ -8,10 +8,10 @@ import time
 
 @when('Click on Cart from Amazon home')
 def click_cart_from_home(context):
-    context.driver.implicitly_wait(5)
-    context.driver.find_element(By.ID, 'nav-cart').click()
-    time.sleep(1)
-
+    # context.driver.implicitly_wait(5)
+    # context.driver.find_element(By.ID, 'nav-cart').click()
+    # time.sleep(1)
+    context.app.header.click_cart()
 
 @then('Verify Amazon Cart is empty')
 def verify_amazon_cart_empty(context):
@@ -19,10 +19,12 @@ def verify_amazon_cart_empty(context):
     expected_result = 'Your Amazon Cart is empty'
     assert expected_result == actual_result, f"Expected {expected_result}, but got {actual_result}"
 
+
 @then('"{expected_text}" message is displayed')
 def verify_empty_cart_msg(context, expected_text):
-    actual_text = context.driver.find_element(By.CSS_SELECTOR, '#sc-active-cart h2').text
-    assert actual_text == expected_text, f'Expected {expected_text}, but got {actual_text}'
+    # actual_text = context.driver.find_element(By.CSS_SELECTOR, '#sc-active-cart h2').text
+    # assert actual_text == expected_text, f'Expected {expected_text}, but got {actual_text}'
+    context.app.search_results_page.verify_empty_cart(expected_text)    #lesson 12 HW7 update
 
 @when('Search Danish Butter Cookies')
 def search_danish_butter_cookies(context):
