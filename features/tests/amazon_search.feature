@@ -11,3 +11,9 @@ Feature: Test Amazon search
   Scenario: User can select pant colors  (lesson 8, HW5)
     Given Open Amazon product B07X8XJRS9 page
     Then Verify user can click through colors
+
+  Scenario: User can select and search in a department
+    Given Open Amazon page
+    When Select department by alias stripbooks
+    And Search for Faust
+    Then Verify books department is selected

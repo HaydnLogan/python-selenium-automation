@@ -29,3 +29,12 @@ def verify_search_worked(context, expected_text):
     # expected_result = '"Table"'
     # assert expected_result == actual_result, f"Expected {expected_result}, but got {actual_result}"
     context.app.search_results_page.verify_search_worked(expected_text)
+
+@then('Verify books department is selected')
+def verify_books_department(context):
+    context.app.search_results_page.verify_books_department()
+
+
+@then('Verify Appliance department is selected')
+def verify_desired_department(context):
+    context.app.search_results_page.verify_appliances_department()
